@@ -1,6 +1,6 @@
 # Homework
 
-## Week3 
+## Week 3 
 ```sql
 -- create the external table from downloaded parquet
 create or replace external table `iconic-heading-449916-n9.ny_taxi_dataset.external_yellow_tripdata_2024`
@@ -90,3 +90,14 @@ from
 where
   date(tpep_dropoff_datetime) >='2024-03-01' and date(tpep_dropoff_datetime) <='2024-03-15' ;
 ```
+
+
+## Week 1
+
+Q1: pip version in the docker 
+``` bash
+docker run -it --entrypoint bash python:3.12.8
+pip --version
+```
+
+Q2: docker networking
