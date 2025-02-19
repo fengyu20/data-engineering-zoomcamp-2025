@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  # name used as ref in dbt
+  - name: jaffle_shop
+    # bigquery project id
+    database: iconic-heading-449916-n9
+    # bigquery dataset name
+    schema: jaffle_shop
+    tables:
+      - name: payment
+
+models:
+  - name: stg_stripe__payments
+    description: Payments database.
+    columns:
+      - name: created_at
+        tests:
+          - assert_order_date_later_than_2018
