@@ -5,16 +5,16 @@ version: "3.0.0"
 require-dbt-version: ">=1.5.0"
 
 dbt-cloud:
-  project-id: 275557 # Put your project id here
+  project-id: 70471823432652
 
-profile: default # Put your profile here
+profile: default 
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["data-tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
+snapshot-paths: ["snapshots"]  
 
 target-path: "target"
 clean-targets:
