@@ -55,14 +55,7 @@ models:
                   to: ref('taxi_zone_lookup')
                   field: locationid
           - name: RateCodeID 
-            description: >
-                The final rate code in effect at the end of the trip.
-                  1= Standard rate
-                  2=JFK
-                  3=Newark
-                  4=Nassau or Westchester
-                  5=Negotiated fare
-                  6=Group ride
+            description: "{{ doc('rate_code') }}"
           - name: Store_and_fwd_flag 
             description: > 
               This flag indicates whether the trip record was held in vehicle
