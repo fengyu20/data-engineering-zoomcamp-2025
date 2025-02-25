@@ -16,7 +16,8 @@ filtered_trips as (
     from unioned_trips
     where fare_amount > 0
       and trip_distance > 0
-      and payment_type_description in ('Cash', 'Credit Card')
+      -- cash and credit_card
+      and payment_type = 1 or payment_type = 2
 ),
 month_fare as (
     -- add year month column
