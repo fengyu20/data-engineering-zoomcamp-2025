@@ -4,5 +4,5 @@ test.py
 yellow_tripdata_2024-10.parquet
 taxi_zone_lookup.csv
 venv/
-pyspark-hands-on/spark-warehouse
-pyspark-hands-on/yellow_tripdata_2024-10_partitioned
+pyspark/spark-warehouse/
+yellow_tripdata_2024-10_partitioned
