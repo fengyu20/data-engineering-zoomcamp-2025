@@ -16,7 +16,7 @@ Instead of writing transformation logic ahead of time, dbt allows you to work di
 
 dbt doesn’t own your data or your transformation logic—it runs on top of your data warehouse. You provide the credentials of your data warehouse, and dbt knows where to run your models. Your code (including SQL queries—in dbt, they are called models—and relevant configurations) is safely stored in your GitHub repository.
 
-![structure]https://fengyu20.github.io/assets/dbt/dbt_structure.png)
+![structure](https://fengyu20.github.io/assets/dbt/dbt_structure.png)
 
 *Picture source: [dbt Youtube Channel](https://youtu.be/M8oi7nSaWps?t=476)*
 
@@ -120,7 +120,7 @@ Once we have defined the models, we run `dbt run` to materialize them in the dat
 
 The following graph, created by the dbt doc feature (which we will explain later), shows the lineage of the models in one dbt project:
 
-![alt text]https://fengyu20.github.io/assets/dbt/lineage.png)
+![alt text](https://fengyu20.github.io/assets/dbt/lineage.png)
 
 ---
 
@@ -234,7 +234,7 @@ If you run `dbt run` first and then `dbt test` later, a model that fails its tes
 
 To streamline this process, dbt offers the `dbt build` command, which runs tests immediately after materializing a model—before proceeding to the next one. For example, after materializing model A, dbt will run the tests for model A, and once successful, it will move on to the next step.
 
-![command order]https://fengyu20.github.io/assets/dbt/command_order.png)
+![command order](https://fengyu20.github.io/assets/dbt/command_order.png)
 
 ---
 
@@ -249,7 +249,7 @@ Jobs in dbt can be triggered in three ways:
    For example, you can set certain models to run every 30 minutes on weekdays.  
    *Note:* If one job is already running, subsequent jobs will be queued until the current job finishes. Therefore, it's important to avoid conflicts between jobs. For example, if you plan to perform a full refresh (build the entire project) on Sunday at 5 a.m., it is better to pause any other jobs.
    
-   ![job conflicts]https://fengyu20.github.io/assets/dbt/job_conflicts.png)  
+   ![job conflicts](https://fengyu20.github.io/assets/dbt/job_conflicts.png)  
    *Picture source: [dbt Learn](https://learn.getdbt.com/learn/course/advanced-deployment/orchestration-35-min/what-is-orchestration?page=6)*
 
 2. **Via a Pull Request:**  
@@ -346,15 +346,15 @@ Assuming Alice has correctly set `DBT_DEV_PREFIX` as `alice`, her `dbt run` will
 When using environment variables, you might wonder how dbt decides which value takes priority if multiple definitions of the same variable exist.
 
 Below is a diagram illustrating the order of precedence for environment variables in dbt:  
-![Precedence]https://fengyu20.github.io/assets/dbt/precedence.png)  
+![Precedence](https://fengyu20.github.io/assets/dbt/precedence.png)  
 *Picture source: [dbt Learn](https://learn.getdbt.com/learn/course/advanced-deployment/custom-environment-and-job-behavior-30min/understanding-custom-environments?page=5)*
 
 1. **Personal or Job Override**  
    For example, if you are running a dbt Cloud job, you can define variables in that job’s configuration. These overrides take precedence over any other environment variables.
-   ![jobs override]https://fengyu20.github.io/assets/dbt/job_override.png)
+   ![jobs override](https://fengyu20.github.io/assets/dbt/job_override.png)
    *Jobs Override* 
 
-   ![alt text]https://fengyu20.github.io/assets/dbt/personal_override.png)
+   ![alt text](https://fengyu20.github.io/assets/dbt/personal_override.png)
    *Personal Override* 
 
 2. **Development Environment**  
@@ -370,7 +370,7 @@ Check [this documentation](https://docs.getdbt.com/docs/build/environment-variab
 
 **Example 1 from DE Zoomcamp Week 4 Homework**
 
-![DE Homework]https://fengyu20.github.io/assets/dbt/DE_hw.png)
+![DE Homework](https://fengyu20.github.io/assets/dbt/DE_hw.png)
 *Picture source: [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/04-analytics-engineering/homework.md)*
 
 1. There is no personal or job override mentioned here.  
@@ -396,7 +396,7 @@ sources:
 ```
 
 **Example 2 from DE Zoomcamp Week 4 Homework**
-![DE HW2]https://fengyu20.github.io/assets/dbt/DE_hw1.pngg)
+![DE HW2](https://fengyu20.github.io/assets/dbt/DE_hw1.pngg)
 *Picture source: [DE Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2025/04-analytics-engineering/homework.md)*
 
 From the question, what we want is a personal override (command line) > environment variable > jinja default.
@@ -470,7 +470,7 @@ One of the following values:
 
 And when you run the `dbt docs generate` and `dbt docs serve` commands, dbt will render the doc website to allow you to easily navigate between models and columns.
 
-![dbt doc]https://fengyu20.github.io/assets/dbt/dbt_doc.png)
+![dbt doc](https://fengyu20.github.io/assets/dbt/dbt_doc.png)
 
 ---
 
