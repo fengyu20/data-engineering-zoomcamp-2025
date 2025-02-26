@@ -1,3 +1,8 @@
 ny_taxi_pipeline.duckdb
 test.py
 .DS_Store
+yellow_tripdata_2024-10.parquet
+taxi_zone_lookup.csv
+venv/
+pyspark-hands-on/spark-warehouse
+pyspark-hands-on/yellow_tripdata_2024-10_partitioned
