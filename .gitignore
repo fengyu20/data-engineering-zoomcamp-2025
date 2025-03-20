@@ -9,6 +9,5 @@ yellow_tripdata_2024-10_partitioned
 bin/
 config.ini
 keys/
-src/
 green_tripdata_2019-10.csv
 python
