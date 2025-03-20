@@ -80,7 +80,7 @@ Steps:
     ```sql
     \copy green_tripdata FROM 'green_tripdata_2019-10.csv' WITH (FORMAT csv, HEADER true);
     ```
-    - Run the SQL Command to see if there are trips have the same pickup and dropoff location.
+    - Run the SQL command to check if there are indeed many trips with the same pickup and drop-off location.
     ```sql
     SELECT
         PULocationID,
@@ -91,7 +91,7 @@ Steps:
     GROUP BY PULocationID, DOLocationID
     ORDER BY cnt DESC;
     ```
-    - Check the trips between this time slot.
+    - Run the SQL command to check the trips with pickup and drop-off location ID = 95 within the targeted time slot. Since we use a session window based on the drop-off time column, consecutive trips are considered as long as the time difference is within 5 minutes. 
     ```sql
     SELECT
         PULocationID,
@@ -102,6 +102,9 @@ Steps:
     WHERE 
         lpep_pickup_datetime >= '2019-10-16 18:03:47'
         and lpep_dropoff_datetime <= '2019-10-16 19:21:16'
+        and PULocationID = 95 
+        and DOLocationID = 95
     order by
         lpep_pickup_datetime
     ```
+    ![alt text](image-1.png)
