@@ -1,4 +1,16 @@
 
+### Table of Contents
+- [Why Terraform?](#why-terraform)
+- [Infrastructure as Code](#infrastructure-as-code)
+- [Hands-on Terraform](#hands-on-terraform)
+  - [Creating Configuration Files](#hands-on-terraform)
+  - [Terraform Commands](#hands-on-terraform)
+    - [terraform init](#hands-on-terraform)
+    - [terraform plan](#hands-on-terraform)
+    - [terraform apply](#hands-on-terraform)
+    - [terraform destroy](#hands-on-terraform)
+- [Learning Resources](#want-to-learn-more)
+
 ### Why Terraform?
 
 In summary, Terraform is a tool used to manage your cloud services.

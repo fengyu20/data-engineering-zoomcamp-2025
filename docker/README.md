@@ -1,5 +1,26 @@
 
 
+### Table of Contents
+- [Why Docker?](#why-docker)
+- [Virtualization and Containerization](#virtualization-and-containerization)
+  - [Hardware Virtualization: Virtual Machine](#hardware-virtualization-virtual-machine)
+  - [Operating System Virtualization: Containerization](#operating-system-virtualization-containerization)
+- [Docker Architecture and Key Components](#docker-architecture-and-key-components)
+- [Hands-on Docker](#hands-on-docker)
+  - [How to Run and Stop a Container?](#how-to-run-and-stop-a-container)
+  - [How to Interact with a Docker Container](#how-to-interact-with-a-docker-container)
+    - [Launching a PostgreSQL Docker Container](#launching-a-postgresql-docker-container)
+    - [Accessing the PostgreSQL Docker Container](#accessing-the-postgresql-docker-container)
+  - [How to Build a Mold (aka Docker Image)?](#how-to-build-a-mold-aka-docker-image)
+    - [Prepare the instructions (aka Dockerfile)](#prepare-the-instructions-aka-dockerfile)
+    - [Build the images using Dockerfile](#build-the-images-using-dockerfile)
+    - [Advanced: Multi-stage builds](#advanced-multi-stage-builds)
+  - [What If I Want to Launch Multiple Containers? (aka Docker Compose)](#what-if-i-want-to-launch-multiple-containers-aka-docker-compose)
+  - [How Do Containers Communicate with Each Other (aka Docker Network)](#how-do-containers-communicate-with-each-other-aka-docker-network)
+    - [Understanding Default Bridge Network](#understanding-default-bridge-network)
+    - [Create Your Own Network](#create-your-own-network)
+- [Want to Learn More?](#want-to-learn-more)
+
 ### Why Docker?
 
 Imagine you have developed a shopping web application, including a React-based frontend, a Python + Flask backend, and a PostgreSQL database, and you want to deploy it in a production environment.

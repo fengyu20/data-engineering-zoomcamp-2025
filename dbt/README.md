@@ -2,6 +2,35 @@
 
 > Note: This article is based on my personal understanding of the dbt courses I’ve completed, including Data Engineering Zoomcamp’s [Week 4: Analytical Engineering](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/04-analytics-engineering), DataCamp’s [Introduction to dbt](https://app.datacamp.com/learn/courses/introduction-to-dbt), and dbt Learn’s [dbt Fundamentals](https://learn.getdbt.com/courses/dbt-fundamentals) and [Advanced Deployment](https://learn.getdbt.com/learn/course/advanced-deployment/).
 
+
+### Table of Contents
+- [Introduction](#what-is-dbt)
+- [Benefits of Using dbt](#benefits-of-using-dbt)
+- [Key Structure](#key-structure)
+- [dbt Components](#components)
+  - [1. dbt Model](#1-dbt-model)
+    - [File Structure of Models](#file-structure-of-models)
+      - [Sources: schema.yml](#sources-schemayml)
+      - [Staging Folder](#staging-folder)
+      - [Mart Folder](#mart-folder)
+    - [Building the Model](#building-the-model)
+  - [2. dbt Test](#2-dbt-test)
+    - [Built-in Tests](#built-in-tests)
+    - [Custom Test: Singular Test](#custom-test-singular-test)
+    - [Custom Test: Generic Test](#custom-test-generic-test)
+    - [Running the Tests](#running-the-tests)
+    - [Combining Run and Test Together](#bonus-combining-run-and-test-together)
+  - [3. dbt Deployment](#3-dbt-deployment)
+    - [Triggering Jobs in dbt](#triggering-jobs-in-dbt)
+    - [Environment Variables](#environment-variables)
+    - [Environment Variable Precedence](#bonus-environment-variable-precedence)
+  - [4. dbt Documentation](#4-dbt-documentation)
+  - [5. Advanced Topics](#5-advanced-topic)
+    - [Testing on Smaller Datasets](#1-how-to-test-and-validate-the-logic-on-a-smaller-dataset)
+    - [Reusing Transformation Logic with Macros](#2-what-if-i-have-the-same-transformation-logic-for-various-columns---dbt-macro)
+    - [From Sources to Materialization](#3-from-sources-to-materialization---dbt-seed-dbt-snapshot)
+- [Learning Resources](#want-to-learn-more)
+
 In the data engineering world, one of the primary focuses is to gather data from various sources—such as OLTP databases (whether on-prem or cloud) and SaaS services (like Stripe Payment, Shopify Order Details, etc.)—in order to prepare it for future business use. This process is also known as ETL: Extract, Transform, Load.
 
 However, as you may imagine, using this approach may result in back-and-forth revisions. For example, what if we defined transformation logic last month but need to modify it this month? In an ETL flow, this would mean we have to retransform and reload the data.

@@ -1,5 +1,28 @@
 > Note: Kubernetes is a tool for orchestrating Docker containers. If you're not familiar with Docker, I recommend you read [this article](https://fengyu20.github.io/data/docker-explained/) first.
 
+
+### Table of Contents
+- [Introduction to Kubernetes](#introduction-to-kubernetes)
+- [Docker Compose vs Kubernetes](#docker-compose-vs-kubernetes)
+- [Benefits of Using Kubernetes vs. Docker Compose](#benefits-of-using-kubernetes-vs-docker-compose)
+  - [Deployment Management](#deployment-management)
+  - [Networking](#networking)
+  - [Insights](#insights)
+- [Kubernetes Architecture](#kubernetes-architecture)
+  - [Developer Side: Define the Desired State](#developer-side-define-the-desired-state)
+  - [Control Plane: The Kubernetes Master](#control-plane-the-kubernetes-master)
+  - [Deployment](#deployment)
+- [Hands-on Kubernetes](#hands-on-k8s)
+  - [Write Your Own Manifests](#write-your-own-manifests)
+    - [Workloads: Deployment vs. StatefulSet](#workloads-deployment-vs-statefulset)
+    - [Networking: LoadBalancer vs. Ingress](#networking-loadbalancer-vs-ingress)
+    - [Storage: Persistent Volume, Persistent Volume Claim and Storage Class](#storage-persistent-volume-persistent-volume-claim-and-storage-class)
+      - [Static Provisioning: PV + PVC](#1-static-provisioning-persistentvolume-pv--persistentvolumeclaim-pvc)
+      - [Dynamic Provisioning: SC + PVC](#2-dynamic-provisioning-storageclass-sc--persistentvolumeclaim-pvc)
+      - [Single Attach vs. Multi Attach](#advanced-single-attach-vs-multi-attach)
+  - [Apply Changes Using kubectl](#apply-changes-using-kubectl)
+- [Further Learning Resources](#want-to-learn-more)
+
 Assume we have three Docker containers: frontend (React), backend (Python), and database.
 
 We can use `docker compose` to manage dependencies among these containers. For example, we can specify that the backend container should start after the database container.

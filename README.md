@@ -1,29 +1,29 @@
-
 # Data Engineering Course Notes - DE Zoomcamp
 
 ## Overview
 
 This repository contains homework assignments and personal notes from the Data Engineering Zoomcamp. It includes assignments and notes on data processing, stream processing, data warehousing, and data ingestion.
 
+## 📚 Learning Notes
+
+As part of my learning journey, I've documented key concepts and practical implementations across various data engineering domains:
+
+- 🏗️ **Infrastructure as Code**: [Terraform](/terraform/README.md)
+- 🐳 **Containerization**: 
+  - [Docker](/docker/README.md)
+  - [Kubernetes](/k8s/README.md)
+- 📊 **Data Modeling & Transformation**: [dbt](/dbt/README.md) 
+
 ## ⚒️ Course Homework
 
 [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) is a course offered by DataTalks.Club. The course primarily uses NYC Taxi datasets to build an end-to-end pipeline—from data ingestion to visualization.
 
-
 This repository contains the homework assignments completed as part of the Data Engineering Zoomcamp:
 
-- **Data Warehousing**: [Google Cloud Platform - BigQuery](/bigquery/)
-- **Data Ingestion**: [DLT](/dlt)
-- **Data Processing**: [Apache Spark](/pyspark)
-- **Stream Processing**: Kafka, [pyflink](/pyflink)
-
-## 📚 Course Notes
-
-Throughout the course, I have written several articles and maintained detailed notes on various data engineering components and best practices.
-
-- **Infrastructure as Code**: [Terraform](/terraform)
-- **Containerization**: [Docker](/docker), [Kubernetes](/k8s)
-- **Data Modeling & Transformation**: [dbt](/dbt)
+- **Data Warehousing**: [Google Cloud Platform - BigQuery](/bigquery/README.md)
+- **Data Ingestion**: [DLT](/dlt/workshop_dlt.py)
+- **Data Processing**: [Apache Spark](/pyspark/nyc_taxi.py)
+- **Stream Processing**: Kafka, [pyflink](/pyflink/session_job.py)
 
 ## 🌱 Learning Beyond the Course
 
